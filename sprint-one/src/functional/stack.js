@@ -7,7 +7,7 @@ var Stack = function(){
   // Implement the methods below
   someInstance.push = function(value){
     var keyArr = Object.keys(storage);
-    var nextKey = /*keyArr.length === 0 ? 0 :*/ keyArr[keyArr.length - 1] + 1;
+    var nextKey = keyArr[keyArr.length - 1] + 1;
     storage[nextKey] = value;
   };
 

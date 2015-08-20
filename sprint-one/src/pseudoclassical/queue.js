@@ -8,18 +8,17 @@ Queue.prototype.enqueue = function(value) {
   if (Object.keys(this.storage).length === 0) {
       this.storage[0] = value;
     } else {
-      //storage.forEach(function(item, key) {
       for (var key in this.storage) {
         var numKey = Number(key) + 1;
         this.storage[numKey] = this.storage[key];
       }  
-      //});
+      
       this.storage[0] = value;
     }
-  // body...
+
 };
 
-Queue.prototype.deque = function(){
+Queue.prototype.dequeue = function(){
    var keyArr = Object.keys(this.storage);
     var lastKey = keyArr[keyArr.length - 1];
     var temp = this.storage[lastKey];
@@ -30,11 +29,6 @@ Queue.prototype.deque = function(){
 Queue.prototype.size = function(){
   var keyArr = Object.keys(this.storage);
     return keyArr.length;
-  };
-
-  return someInstance;
-
-
 };
 
 

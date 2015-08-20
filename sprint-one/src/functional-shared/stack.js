@@ -23,7 +23,6 @@ var stackMethods = {
     this.storage[nextKey] = value;
   },
   pop: function() {
-      debugger;
 
     var keyArr = Object.keys(this.storage);
     //if (keyArr.length !== 0) {
