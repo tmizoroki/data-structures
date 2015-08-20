@@ -8,13 +8,14 @@ var Queue = function(){
 
   someInstance.enqueue = function(value){
     if (Object.keys(storage).length === 0) {
-      debugger;
       storage[0] = value;
     } else {
+      //storage.forEach(function(item, key) {
       for (var key in storage) {
         var numKey = Number(key) + 1;
         storage[numKey] = storage[key];
       }  
+      //});
       storage[0] = value;
     }
   };
