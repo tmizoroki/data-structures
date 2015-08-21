@@ -17,12 +17,11 @@ var LinkedList = function(){
       nodes.push(node);
       list.tail = node;
       list.head = node;
-      console.log('call');
     } else {
     counter++;
     var node = Node(value);
     nodes.push(node);
-    list.tail.next = node;
+    list.tail.next = node; //how is list.head.next being set here?
     list.tail = list.tail.next;
       }    
   };
