@@ -1,3 +1,8 @@
+
+
+
+
+
 var LinkedList = function(){
   var list = {};
   list.head = null;
@@ -16,7 +21,7 @@ var LinkedList = function(){
     } else {
     counter++;
     var node = Node(value);
-      nodes.push(node);
+    nodes.push(node);
     list.tail.next = node;
     list.tail = list.tail.next;
       }    
@@ -60,7 +65,6 @@ var LinkedList = function(){
 
 };
     
-
 var Node = function(value){
   var node = {};
 
@@ -69,6 +73,12 @@ var Node = function(value){
 
   return node;
 };
+
+
+
+
+
+
 
 /*
  * Complexity: What is the time complexity of the above functions?
