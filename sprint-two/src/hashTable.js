@@ -48,7 +48,7 @@ HashTable.prototype.retrieve = function(k){
       result = item[1];
     }
   });
-  // this._storage.each(function(item, index, storage) {
+  // this._storage.each(function(ite  m, index, storage) {
   //   if (item[index][0] === k) {
   //     result = item[index][1];
   //   }
@@ -66,7 +66,6 @@ HashTable.prototype.remove = function(k){
   var bucket = this._storage.get(i);
   _.each(bucket, function(item, index, bucket) {
     if (item[0] === k) {
-      console.log(item);
       //bucket.splice(,1);
       bucket[index][1] = null;
     }

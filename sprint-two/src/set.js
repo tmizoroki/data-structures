@@ -8,7 +8,7 @@ var setPrototype = {};
 
 setPrototype.add = function(item){
   if (typeof item === 'string') {
-    if (this._storage.indexOf(item) == -1) {
+    if (this._storage.indexOf(item) === -1) {
       this._storage.push(item);
     }
   }
@@ -30,3 +30,17 @@ setPrototype.remove = function(item){
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+
+
+
+var flag = false;
+ function deepEqual(array1, array2){
+  for(var i = 0; array1.length; i++){
+    if (array1[i] === array2[i] && typeof array1[i] !== 'object') {
+      flag true;
+    } else if(Array.isArray(array1[i])){
+      deepEqual(array1[i],array2[i]);
+    }
+  }
+ }
