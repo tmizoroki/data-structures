@@ -3,6 +3,7 @@ var BinarySearchTree = function(value){
   tree.left = null;
   tree.right = null;
   tree.value = value;
+
   return tree;
 };
 
@@ -52,6 +53,52 @@ if (this.left){
 
 
 };
+
+BinarySearchTree.prototype.breadthFirstLog=function(){
+
+  // var makeChildren = function(nodeArray) {
+  //   var newArr = [];
+  //   _.each(nodeArray, function(item) {
+  //     if(item.right||item.left){
+  //     newArr.push(item.left, item.right);
+  //     return newArr;}
+  //   });
+  // }
+
+  // console.log(this);
+  // var logNodes = function(node) {
+  //   _.each(makeChildren(node), function(item) {
+  //     console.log(item);
+  //   });
+  //   logNodes(makeChildren(node));
+  // }
+  // logNodes(this);
+  function search(node){
+    console.log(node.value);
+    if(node.left){
+      search(node.left);
+    }
+    if(node.right){
+      search(node.right);
+    }
+  }
+  search(this);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
