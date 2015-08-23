@@ -73,6 +73,29 @@ treeMethods.removeFromParent = function(){
 
 };
 
+treeMethods.traverse = function(callback){
+  var that = this;
+  callback(this.value);
+  function deeper(node){
+
+    callback(node.value);
+    if(node.children.length > 0){
+    for(var i=0; i<node.children.length; i++){
+      deeper(node.children[i]);
+    }
+  }
+
+  }
+
+
+
+
+  for(var i=0; i<this.children.length; i++){
+  deeper(this.children[i]);
+}
+
+};
+
 
 /*
  * Complexity: What is the time complexity of the above functions?

@@ -34,13 +34,13 @@ setPrototype.remove = function(item){
 
 
 
-var flag = false;
- function deepEqual(array1, array2){
-  for(var i = 0; array1.length; i++){
-    if (array1[i] === array2[i] && typeof array1[i] !== 'object') {
-      flag true;
-    } else if(Array.isArray(array1[i])){
-      deepEqual(array1[i],array2[i]);
-    }
-  }
- }
+// var flag = false;
+//  function deepEqual(array1, array2){
+//   for(var i = 0; array1.length; i++){
+//     if (array1[i] === array2[i] && typeof array1[i] !== 'object') {
+//       flag true;
+//     } else if(Array.isArray(array1[i])){
+//       deepEqual(array1[i],array2[i]);
+//     }
+//   }
+//  }

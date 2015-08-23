@@ -56,52 +56,35 @@ if (this.left){
 
 BinarySearchTree.prototype.breadthFirstLog=function(){
 
-  // var makeChildren = function(nodeArray) {
-  //   var newArr = [];
-  //   _.each(nodeArray, function(item) {
-  //     if(item.right||item.left){
-  //     newArr.push(item.left, item.right);
-  //     return newArr;}
-  //   });
-  // }
 
-  // console.log(this);
-  // var logNodes = function(node) {
-  //   _.each(makeChildren(node), function(item) {
-  //     console.log(item);
-  //   });
-  //   logNodes(makeChildren(node));
-  // }
-  // logNodes(this);
-  function search(node){
-    console.log(node.value);
+
+var row = [];
+
+  var place = function(node, index) {
+    if(!Array.isArray(row[index])) {
+      row[index] = [];
+    }
+
+    row[index].push(node.value);
+
     if(node.left){
-      search(node.left);
+      place(node.left, index + 1);
     }
     if(node.right){
-      search(node.right);
+      place(node.right, index + 1);
+    }
+  };
+
+debugger;
+place(this, 0);
+
+
+
+
+  for(var i = 0; i<row.length; i++){
+    for(var j = 0; j<row[i].length; j++){
+      console.log(row[i][j]);
     }
   }
-  search(this);
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
 

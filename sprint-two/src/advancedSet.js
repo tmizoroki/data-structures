@@ -63,7 +63,13 @@ setPrototype.contains = function(item){
 };
 
 setPrototype.remove = function(item){
-  this._storage.splice(this._storage.indexOf(item), 1);
+
+  for(var i =0; i<this._storage.length; i++){
+    if(this._storage[i]===item){
+      this._storage.splice(i,1);
+    }
+  }
+ 
 };
 
 /*
